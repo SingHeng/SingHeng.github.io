@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>关于数据包的那些事</title>
+      <link href="/SingHeng/SingHeng.github.io/2022/12/26/di-yi-pian-zheng-shi-de-bo-ke/"/>
+      <url>/SingHeng/SingHeng.github.io/2022/12/26/di-yi-pian-zheng-shi-de-bo-ke/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数据包"><a href="#数据包" class="headerlink" title="数据包"></a><font size="6" color="blue">数据包</font></h2><p>数据包的结构：数据包的结构非常复杂，不是三言两语能够说清的，在这里主要了解一下它的关键构成就可以了，这对于理解TCP/IP协议的通信原理是非常重要的。数据包主要由“目的IP地址”、“源IP地址”、“净载数据”等部分构成，包括包头和包体，包头是固定长度，包体的长度不定，各字段长度固定，双方的请求数据包和应答数据包的包头结构是一致的，不同的是包体的定义。 数据包的结构与我们平常写信非常类似，目的IP地址是说明这个数据包是要发给谁的，相当于收信人地址；源IP地址是说明这个数据包是发自哪里的，相当于发信人地址；而净载数据相当于信件的内容。 正是因为数据包具有这样的结构，安装了TCP/IP协议的计算机之间才能相互通信。我们在使用基于TCP/IP协议的网络时，网络中其实传递的就是数据包。理解数据包，对于网络管理的网络安全具有至关重要的意义。</p><h3 id="Request-请求数据包数据格式"><a href="#Request-请求数据包数据格式" class="headerlink" title="Request 请求数据包数据格式 "></a><font size="6" color="blue">Request 请求数据包数据格式 </font></h3><blockquote><p>Request Headers<br>POST&nbsp;/adduser&nbsp;HTTP/1.1<br>Host:&nbsp;localhost:8030<br>Connection:&nbsp;keep-alive<br>Content-Length:16<br>Pragma:&nbsp;no-cache<br>Cache-Control:&nbsp;no-cache<br>Origin:&nbsp;chrome-extension://fdmmgilgnpjigdojojpjoooidkmcomcm<br>User-Agent:&nbsp;Mozilla/5.0(Windows&nbsp;NT&nbsp;6.1;&nbsp;Win64;&nbsp;x64)&nbsp;AppleWebKit/537.36{KHTML,&nbsp;like&nbsp;Gecko)<br>Chrome/66.0.3359.181&nbsp;Safari/537.36<br>Content-Type:&nbsp;application/x-www-form-urlencoded<br>VAccept:<em>/</em><br>Accept-Encoding:&nbsp;gzip,&nbsp;deflate<br>Accept-Language:&nbsp;zh-CN,zh;q=0.9<br>Form Data<br>name=name&amp;age=11</p></blockquote><p>请求行<br> 请求行由三个标记组成：请求方法、请求 URL 和 HTTP 版本，它们用空格分享。<br> 例如：GET /index.html HTTP/1.1</p><blockquote><p>HTTP 规划定义了8种可能的请求方法：<br>1.GET：检索 URL 中标识资源的一个简单请求<br>2.HEAD：与 GET 方法相同，服务器只返回状态行和头标，并不返回请求文档<br>3.POST：服务器接受被写入客户端输出流中的数据的请求<br>4.PUT：服务器保存请求数据作为指定 URL 新内容的请求<br>5.DELETE：服务器删除 URL 中命令的资源的请求<br>6.OPTIONS：关于服务器支持的请求方法信息的请求<br>7.TRACE：web 服务器反馈 Http 请求和其头标的请求<br>8.CONNECT ：已文档化，但当前未实现的一个方法，预留做隧道处理</p></blockquote><p>请求头<br>由关键字/值对组成，每行一对，关键字和值用冒号分享。请求头标通知服务器腾于客户端的功能和标识。</p><blockquote><p>HOST:&nbsp;主机或域名地址<br>Accept：指浏览器或其他客户可以接爱的 MIME 文件格式。Servlet 可以根据它判断并返回适当的文件格<br>式。<br>User-Agent：是客户浏览器名称<br>Host：对应网址 URL 中的 Web 名称和端口号。<br>Accept-Langeuage：指出浏览器可以接受的语言种类，如 en 或 en-us，指英语。<br>connection：用来告诉服务器是否可以维持固定的 HTTP 连接。http 是无连接的，HTTP/1.1 使用 Keep-Alive<br>为默认值，这样，当浏览器需要多个文件时(比如一个&nbsp;HTML&nbsp;文件和相关的图形文件)，不需要每次都建立<br>连接<br>Cookie：浏览器用这个属性向服务器发送 Cookie。Cookie 是在浏览器中寄存的小型数据体，它可以记载<br>和服务器相关的用户信息，也可以用来实现会话功能。<br>Referer ：&nbsp;表&nbsp;明&nbsp;产&nbsp;生&nbsp;请&nbsp;求&nbsp;的&nbsp;网&nbsp;页 URL 。&nbsp;如&nbsp;比&nbsp;从&nbsp;网&nbsp;页&nbsp;/icconcept/index.jsp 中&nbsp;点&nbsp;击&nbsp;一&nbsp;个&nbsp;链&nbsp;接&nbsp;到&nbsp;网&nbsp;页<br>/icwork/search&nbsp;，&nbsp;在&nbsp;向&nbsp;服&nbsp;务&nbsp;器&nbsp;发&nbsp;送&nbsp;的&nbsp;GET/icwork/search&nbsp;中&nbsp;的&nbsp;请&nbsp;求&nbsp;中&nbsp;，&nbsp;Referer&nbsp;是<br><a href="http://hostname:8080/icconcept/index.jsp%E3%80%82%E8%BF%99%E4%B8%AA%E5%B1%9E%E6%80%A7%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%9D%A5%E8%B7%9F%E8%B8%AA">http://hostname:8080/icconcept/index.jsp。这个属性可以用来跟踪</a> Web 请求是从什么网站来的。<br>Content-Type：用来表名 request 的内容类型。可以用 HttpServletRequest 的 getContentType()方法取得。<br>Accept-Charset：指出浏览器可以接受的字符编码。英文浏览器的默认值是 ISO-8859-1.<br>Accept-Encoding：指出浏览器可以接受的编码方式。编码方式不同于文件格式，它是为了压缩文件并加<br>速文件传递速度。浏览器在接收到 Web 响应之后先解码，然后再检查文件格式。</p></blockquote><p>空行<br> 最后一个请求头标之后是空行，发送回车符和退行，通知服务器以下不再有头标。</p><p>请求数据<br> 使用 POST 传送，最常使用的是 Content-Type 和 Content-Length 头标。</p><h3 id="Response-返回数据包数据格式"><a href="#Response-返回数据包数据格式" class="headerlink" title="Response 返回数据包数据格式"></a><font size="6" color="blue">Response 返回数据包数据格式</font></h3><p>一个响应由四个部分组成；状态行、响应头标、空行、响应数据。</p><blockquote><p>1.状态行：协议版本、数字形式的状态代码和状态描述，个元素之间以空格分隔<br>2.响应头标：包含服务器类型、日期、长度、内容类型等<br>3.空行：响应头与响应体之间用空行隔开<br>4.响应数据：浏览器会将实体内容中的数据取出来，生成相应的页面</p></blockquote><p>HTTP 响应码：</p><blockquote><p>1xx：信息，请求收到，继续处理<br>2xx：成功，行为被成功地接受、理解和采纳<br>3xx：重定向，为了完成请求，必须进一步执行的动作<br>4xx：客户端错误<br>5xx：服务器错</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据包 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据包格式 </tag>
+            
+            <tag> web那些事 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>新的文章</title>
+      <link href="/SingHeng/SingHeng.github.io/2022/12/26/xin-de-wen-zhang/"/>
+      <url>/SingHeng/SingHeng.github.io/2022/12/26/xin-de-wen-zhang/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><p>代码测试：<br>```py<br>print(“Hello”)<br>```</p><p>注意：这里因为我放在md文件中的，所以加上了\，不解析```，实际测试时请去掉\。</p><p>图片测试：</p><p><img src="http://mculover666.cn/blog/20191031/R4mWMXsrRKxu.png?imageslim"></p><p>引用测试：</p><blockquote><p>这是一条引用</p></blockquote><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><p>无序列表测试：</p><ul><li>哈哈</li><li>嘿嘿</li><li>吼吼</li></ul><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/SingHeng/SingHeng.github.io/2022/12/25/hello-world/"/>
+      <url>/SingHeng/SingHeng.github.io/2022/12/25/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
