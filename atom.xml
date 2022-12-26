@@ -6,7 +6,7 @@
   <link href="https://github.com/SingHeng/SingHeng.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/SingHeng/SingHeng.github.io/"/>
-  <updated>2022-12-26T09:00:34.705Z</updated>
+  <updated>2022-12-26T14:57:12.772Z</updated>
   <id>https://github.com/SingHeng/SingHeng.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文件上传漏洞浅谈</title>
+    <link href="https://github.com/SingHeng/SingHeng.github.io/2022/12/26/wen-jian-shang-chuan-lou-dong-qian-tan/"/>
+    <id>https://github.com/SingHeng/SingHeng.github.io/2022/12/26/wen-jian-shang-chuan-lou-dong-qian-tan/</id>
+    <published>2022-12-26T14:48:00.000Z</published>
+    <updated>2022-12-26T14:57:12.772Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;文件上传漏洞&quot;&gt;&lt;a href=&quot;#文件上传漏洞&quot; class=&quot;headerlink&quot; title=&quot;文件上传漏洞&quot;&gt;&lt;/a&gt;&lt;font size=&quot;8px&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="web漏洞" scheme="https://github.com/SingHeng/SingHeng.github.io/categories/web%E6%BC%8F%E6%B4%9E/"/>
+    
+    <category term="网站中间件" scheme="https://github.com/SingHeng/SingHeng.github.io/categories/web%E6%BC%8F%E6%B4%9E/%E7%BD%91%E7%AB%99%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+    
+    <category term="web漏洞" scheme="https://github.com/SingHeng/SingHeng.github.io/tags/web%E6%BC%8F%E6%B4%9E/"/>
+    
+    <category term="文件上传漏洞" scheme="https://github.com/SingHeng/SingHeng.github.io/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/"/>
+    
+    <category term="解析漏洞" scheme="https://github.com/SingHeng/SingHeng.github.io/tags/%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/"/>
+    
+  </entry>
   
   <entry>
     <title>关于数据包的那些事</title>
