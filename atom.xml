@@ -6,7 +6,7 @@
   <link href="http://www.zyj6.top/atom.xml" rel="self"/>
   
   <link href="http://www.zyj6.top/"/>
-  <updated>2022-12-26T14:57:12.772Z</updated>
+  <updated>2022-12-27T13:32:24.075Z</updated>
   <id>http://www.zyj6.top/</id>
   
   <author>
@@ -17,9 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>xss跨站之原理分类及攻击手法</title>
+    <link href="http://www.zyj6.top/year/12/27/xss-kua-zhan-zhi-yuan-li-fen-lei-ji-gong-ji-shou-fa/"/>
+    <id>http://www.zyj6.top/year/12/27/xss-kua-zhan-zhi-yuan-li-fen-lei-ji-gong-ji-shou-fa/</id>
+    <published>2022-12-27T13:04:00.000Z</published>
+    <updated>2022-12-27T13:32:24.075Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Xss跨站攻击的原理&quot;&gt;&lt;a href=&quot;#Xss跨站攻击的原理&quot; class=&quot;headerlink&quot; title=&quot;Xss跨站攻击的原理&quot;&gt;&lt;/a&gt;Xss跨站攻击的原理&lt;/h2&gt;&lt;p&gt;  XSS</summary>
+        
+      
+    
+    
+    
+    <category term="web漏洞" scheme="http://www.zyj6.top/categories/web%E6%BC%8F%E6%B4%9E/"/>
+    
+    
+    <category term="web漏洞" scheme="http://www.zyj6.top/tags/web%E6%BC%8F%E6%B4%9E/"/>
+    
+    <category term="Xss跨站漏洞" scheme="http://www.zyj6.top/tags/Xss%E8%B7%A8%E7%AB%99%E6%BC%8F%E6%B4%9E/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文件上传漏洞浅谈</title>
-    <link href="http://www.zyj6.top/title.html"/>
-    <id>http://www.zyj6.top/title.html</id>
+    <link href="http://www.zyj6.top/year/12/26/wen-jian-shang-chuan-lou-dong-qian-tan/"/>
+    <id>http://www.zyj6.top/year/12/26/wen-jian-shang-chuan-lou-dong-qian-tan/</id>
     <published>2022-12-26T14:48:00.000Z</published>
     <updated>2022-12-26T14:57:12.772Z</updated>
     
@@ -49,8 +76,8 @@
   
   <entry>
     <title>关于数据包的那些事</title>
-    <link href="http://www.zyj6.top/title.html"/>
-    <id>http://www.zyj6.top/title.html</id>
+    <link href="http://www.zyj6.top/year/12/26/di-yi-pian-zheng-shi-de-bo-ke/"/>
+    <id>http://www.zyj6.top/year/12/26/di-yi-pian-zheng-shi-de-bo-ke/</id>
     <published>2022-12-26T07:47:00.000Z</published>
     <updated>2022-12-26T09:00:34.705Z</updated>
     
