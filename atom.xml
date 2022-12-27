@@ -3,11 +3,11 @@
   <title>绵酱</title>
   
   
-  <link href="http://www.zyj6.top/atom.xml" rel="self"/>
+  <link href="https://github.com/SingHeng/SingHeng.github.io/atom.xml" rel="self"/>
   
-  <link href="http://www.zyj6.top/"/>
+  <link href="https://github.com/SingHeng/SingHeng.github.io/"/>
   <updated>2022-12-27T13:32:24.075Z</updated>
-  <id>http://www.zyj6.top/</id>
+  <id>https://github.com/SingHeng/SingHeng.github.io/</id>
   
   <author>
     <name>绵酱</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>xss跨站之原理分类及攻击手法</title>
-    <link href="http://www.zyj6.top/year/12/27/xss-kua-zhan-zhi-yuan-li-fen-lei-ji-gong-ji-shou-fa/"/>
-    <id>http://www.zyj6.top/year/12/27/xss-kua-zhan-zhi-yuan-li-fen-lei-ji-gong-ji-shou-fa/</id>
+    <link href="https://github.com/SingHeng/SingHeng.github.io/year/12/27/xss-kua-zhan-zhi-yuan-li-fen-lei-ji-gong-ji-shou-fa/"/>
+    <id>https://github.com/SingHeng/SingHeng.github.io/year/12/27/xss-kua-zhan-zhi-yuan-li-fen-lei-ji-gong-ji-shou-fa/</id>
     <published>2022-12-27T13:04:00.000Z</published>
     <updated>2022-12-27T13:32:24.075Z</updated>
     
@@ -34,19 +34,19 @@
     
     
     
-    <category term="web漏洞" scheme="http://www.zyj6.top/categories/web%E6%BC%8F%E6%B4%9E/"/>
+    <category term="web漏洞" scheme="https://github.com/SingHeng/SingHeng.github.io/categories/web%E6%BC%8F%E6%B4%9E/"/>
     
     
-    <category term="web漏洞" scheme="http://www.zyj6.top/tags/web%E6%BC%8F%E6%B4%9E/"/>
+    <category term="web漏洞" scheme="https://github.com/SingHeng/SingHeng.github.io/tags/web%E6%BC%8F%E6%B4%9E/"/>
     
-    <category term="Xss跨站漏洞" scheme="http://www.zyj6.top/tags/Xss%E8%B7%A8%E7%AB%99%E6%BC%8F%E6%B4%9E/"/>
+    <category term="Xss跨站漏洞" scheme="https://github.com/SingHeng/SingHeng.github.io/tags/Xss%E8%B7%A8%E7%AB%99%E6%BC%8F%E6%B4%9E/"/>
     
   </entry>
   
   <entry>
     <title>文件上传漏洞浅谈</title>
-    <link href="http://www.zyj6.top/year/12/26/wen-jian-shang-chuan-lou-dong-qian-tan/"/>
-    <id>http://www.zyj6.top/year/12/26/wen-jian-shang-chuan-lou-dong-qian-tan/</id>
+    <link href="https://github.com/SingHeng/SingHeng.github.io/year/12/26/wen-jian-shang-chuan-lou-dong-qian-tan/"/>
+    <id>https://github.com/SingHeng/SingHeng.github.io/year/12/26/wen-jian-shang-chuan-lou-dong-qian-tan/</id>
     <published>2022-12-26T14:48:00.000Z</published>
     <updated>2022-12-26T14:57:12.772Z</updated>
     
@@ -61,23 +61,23 @@
     
     
     
-    <category term="web漏洞" scheme="http://www.zyj6.top/categories/web%E6%BC%8F%E6%B4%9E/"/>
+    <category term="web漏洞" scheme="https://github.com/SingHeng/SingHeng.github.io/categories/web%E6%BC%8F%E6%B4%9E/"/>
     
-    <category term="网站中间件" scheme="http://www.zyj6.top/categories/web%E6%BC%8F%E6%B4%9E/%E7%BD%91%E7%AB%99%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    <category term="网站中间件" scheme="https://github.com/SingHeng/SingHeng.github.io/categories/web%E6%BC%8F%E6%B4%9E/%E7%BD%91%E7%AB%99%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
     
     
-    <category term="web漏洞" scheme="http://www.zyj6.top/tags/web%E6%BC%8F%E6%B4%9E/"/>
+    <category term="web漏洞" scheme="https://github.com/SingHeng/SingHeng.github.io/tags/web%E6%BC%8F%E6%B4%9E/"/>
     
-    <category term="文件上传漏洞" scheme="http://www.zyj6.top/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/"/>
+    <category term="文件上传漏洞" scheme="https://github.com/SingHeng/SingHeng.github.io/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/"/>
     
-    <category term="解析漏洞" scheme="http://www.zyj6.top/tags/%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/"/>
+    <category term="解析漏洞" scheme="https://github.com/SingHeng/SingHeng.github.io/tags/%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/"/>
     
   </entry>
   
   <entry>
     <title>关于数据包的那些事</title>
-    <link href="http://www.zyj6.top/year/12/26/di-yi-pian-zheng-shi-de-bo-ke/"/>
-    <id>http://www.zyj6.top/year/12/26/di-yi-pian-zheng-shi-de-bo-ke/</id>
+    <link href="https://github.com/SingHeng/SingHeng.github.io/year/12/26/di-yi-pian-zheng-shi-de-bo-ke/"/>
+    <id>https://github.com/SingHeng/SingHeng.github.io/year/12/26/di-yi-pian-zheng-shi-de-bo-ke/</id>
     <published>2022-12-26T07:47:00.000Z</published>
     <updated>2022-12-26T09:00:34.705Z</updated>
     
@@ -92,12 +92,12 @@
     
     
     
-    <category term="数据包" scheme="http://www.zyj6.top/categories/%E6%95%B0%E6%8D%AE%E5%8C%85/"/>
+    <category term="数据包" scheme="https://github.com/SingHeng/SingHeng.github.io/categories/%E6%95%B0%E6%8D%AE%E5%8C%85/"/>
     
     
-    <category term="数据包格式" scheme="http://www.zyj6.top/tags/%E6%95%B0%E6%8D%AE%E5%8C%85%E6%A0%BC%E5%BC%8F/"/>
+    <category term="数据包格式" scheme="https://github.com/SingHeng/SingHeng.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8C%85%E6%A0%BC%E5%BC%8F/"/>
     
-    <category term="web那些事" scheme="http://www.zyj6.top/tags/web%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
+    <category term="web那些事" scheme="https://github.com/SingHeng/SingHeng.github.io/tags/web%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
     
   </entry>
   
