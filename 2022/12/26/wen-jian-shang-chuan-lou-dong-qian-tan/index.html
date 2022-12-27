@@ -539,7 +539,7 @@
 <blockquote>
 <p><strong>&lt;FilesMatch “3”&gt;<br>    SetHandler application/x-httpd-php<br> &lt;/FilesMatch&gt;</strong></p>
 </blockquote>
-<p> 只要文件名中包含了3这个数字就会被当作php文件执行<br> <img src="/img/01.png" alt=" " title="上传成功3.php"></p>
+<p> 只要文件名中包含了3这个数字就会被当作php文件执行<br> <img src="/SingHeng/SingHeng.github.io/img/01.png" alt=" " title="上传成功3.php"></p>
 <p>apache漏洞主要形成于网站的配置文件，如果配置不当，很有可能出现解析漏洞，如下是存在的主要原因：</p>
 <blockquote>
 <p><strong>1.Apache 解析文件的规则是从右到左开始判断解析，如果后缀名为不可识别文件解析，就再往左判断。<br>2.AddType application/x-httpd-php .jpg   有可能导致解漏洞<br>3.AddHandler 也有可能导致解析漏洞</strong></p>
@@ -574,9 +574,9 @@
 <blockquote>
 <p>docker-compose up -d</p>
 </blockquote>
-<p>启动之后我们直接查看网关地址进行访问<br><img src="/img/02.jpg" alt=" " title="网关地址配置"><br><img src="/img/03.jpg" alt=" " title="网关地址配置"></p>
-<p>上传图片木马成功之后，返回图片地址<br><img src="/img/03.jpg" alt=" " title="返回地址"><br>访问成功<br><img src="/img/04.jpg" alt=" " title="成功访问"></p>
-<p>增加/x.php，可以发现图片就被解析成PHP文件<br><img src="/img/05.jpg" alt=" " title="解析成为php"></p>
+<p>启动之后我们直接查看网关地址进行访问<br><img src="/SingHeng/SingHeng.github.io/img/02.jpg" alt=" " title="网关地址配置"><br><img src="/SingHeng/SingHeng.github.io/img/03.jpg" alt=" " title="网关地址配置"></p>
+<p>上传图片木马成功之后，返回图片地址<br><img src="/SingHeng/SingHeng.github.io/img/03.jpg" alt=" " title="返回地址"><br>访问成功<br><img src="/SingHeng/SingHeng.github.io/img/04.jpg" alt=" " title="成功访问"></p>
+<p>增加/x.php，可以发现图片就被解析成PHP文件<br><img src="/SingHeng/SingHeng.github.io/img/05.jpg" alt=" " title="解析成为php"></p>
 <p>由于nginx做了如上配置，如果碰到.php后缀的就交给fastcgi来解析，因此我们可构造/test.jpg/.php(此处的.php必须是服务器端目录下不存在的如x.php等)，这里的test.jpg就是我们上传的图片木马<br>当fastcgi处理x.php时，发现文件不存在，这里php.ini配置文件中的cgi.fix_pathinfo=1就发挥了作用，如果当前路径不存在，就返回上层路径即test.jpg，此时fastcig就将test.jpg格式文件当php来解析了<br>但是，在php-fpm.conf配置文件中的security.limit_extensions配置项限制了fastcgi要解析的文件类型（如果该选项未开启，默认只解析.php）<br>查看配置文件发现这里未限制fastcgi要解析的格式，故造成nginx因错误配置不当发现解析漏洞</p>
 <h3 id="漏洞修复"><a href="#漏洞修复" class="headerlink" title="漏洞修复"></a><span>漏洞修复</span></h3><blockquote>
 <p>在php版本比较低时，将php.ini文件中的cgi.fix_pathinfp的值设置为0，即关闭cgi解析<br>php-fpm.conf中的 security.limit_extensions =.php，即仅支持.php后缀解析</p>
@@ -636,7 +636,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/SingHeng/SingHeng.github.io/2022/12/26/wen-jian-shang-chuan-lou-dong-qian-tan/">https://github.com/SingHeng/SingHeng.github.io/2022/12/26/wen-jian-shang-chuan-lou-dong-qian-tan/</a>
+                    <a href="http://www.zyj6.top/2022/12/26/wen-jian-shang-chuan-lou-dong-qian-tan/">http://www.zyj6.top/2022/12/26/wen-jian-shang-chuan-lou-dong-qian-tan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
