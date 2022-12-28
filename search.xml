@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>xsstrike工具的使用</title>
+      <link href="/year/12/28/xsstrike-gong-ju-de-shi-yong/"/>
+      <url>/year/12/28/xsstrike-gong-ju-de-shi-yong/</url>
+      
+        <content type="html"><![CDATA[<h3 id="关于XSStrike"><a href="#关于XSStrike" class="headerlink" title="关于XSStrike"></a>关于XSStrike</h3><p>XSStrike是一款用于探测并利用XSS漏洞的脚本<br>它集成了payload生成器、爬虫和模糊引擎功能。XSStrike不是像其他工具那样注入有效负载并检查其工作，而是通过多个解析器分析响应，然后通过与模糊引擎集成的上下文分析来保证有效负载。除此之外，XSStrike还具有爬行，模糊测试，参数发现，WAF检测功能。它还会扫描DOM XSS漏洞。</p><hr><p>下面是xsstrike的下载链接</p><blockquote><p><a href="https://github.com/s0md3v/XSStrike">XSS的github项目</a></p></blockquote><blockquote><p><a href="https://pan.baidu.com/s/1y50VYVRGnRumg7CP1qqdRA?pwd=ooen">百度网盘链接 密码ooen</a></p></blockquote><h4 id="XSStrike的特点"><a href="#XSStrike的特点" class="headerlink" title="XSStrike的特点"></a>XSStrike的特点</h4><p>对参数进行模糊测试之后构建合适的payload</p><p>使用payload对参数进行穷举匹配</p><p>内置爬虫功能</p><p>检测并尝试绕过WAF</p><p>支持GET及POST方式</p><p>误报率极低</p><h3 id="XSStrike的使用"><a href="#XSStrike的使用" class="headerlink" title="XSStrike的使用"></a>XSStrike的使用</h3><p><strong>绵酱这边提现你：XSStrike只可以运行在python 3.6 及以上版本！！！！！！</strong></p><p>下载完后解压，复制XSStrike.py的文件路径在cmd窗口中运行</p><p>更新依赖 &nbsp;在xsstrike目录中</p><blockquote><p>pip3 install -r requirements.txt<br>运行<br>python3 xsstrike.py -u “<a href="http://target/">http://target</a>“</p></blockquote><p>测试GET传参的网页：</p><blockquote><p>python3 xsstrike.py -u “<a href="http://xxxxxxxx.com/xss.php?payload=1">http://xxxxxxxx.com/xss.php?payload=1</a>“</p></blockquote><p>测试POST数据：</p><blockquote><p>python3 xsstrike.py -u “<a href="http://xxxxx.com/search.php">http://xxxxx.com/search.php</a>“ –data “q=query”<br>python3 xsstrike.py -u “<a href="http://xxxxxx.com/search.php">http://xxxxxx.com/search.php</a>“ –data ‘{“q”:”query”} –json’</p></blockquote><p>通过解析HTML和暴力破解来查找隐藏的参数</p><blockquote><p>python3 xsstrike.py -u “<a href="http://example.com/page.php">http://example.com/page.php</a>“ –params</p></blockquote><p>盲打XSS：爬行中使用此参数可向每个html表单里面的每个变量插入xss代码<br>在爬取时使用此选项，XSStrike注入定义在core/config.py中的盲注payloads到每个HTML表单的每个参数。<br>core/config.py中的payloads</p><blockquote><p>python3 xsstrike.py -u <a href="http://example.com/page.php?q=query">http://example.com/page.php?q=query</a> –crawl –blind</p></blockquote><p><img src="/img/11.png" title="我也没看懂"></p><p>这种情况我我也不清楚，这就是gitub第一xss注入神器吗</p><p>模糊测试 –fuzzer<br>该模糊器旨在测试过滤器和Web应用程序防火墙，可使用-d选项将延迟设置为1秒。不然可能被waf软件拉黑ip</p><blockquote><p>python3 xsstrike.py -u “<a href="http://example.com/search.php?q=query">http://example.com/search.php?q=query</a>“ –fuzzer</p></blockquote><p>跳过Dom扫描<br>选项：–skip-dom</p><p>如果确定了不是dom型，为了节省时间，可以跳过dom扫描。</p><blockquote><p>python xsstrike.py -u “<a href="http://example.com/search.php?q=query">http://example.com/search.php?q=query</a>“ –skip-dom</p></blockquote><h3 id="各参数的说明"><a href="#各参数的说明" class="headerlink" title="各参数的说明"></a>各参数的说明</h3><blockquote><p>选项作用</p><blockquote><p>-h, –help显示帮助信息并退出<br> -u, –url  目标url<br>–data post方法的数据<br>-f, –file  从文件读取payloads<br>-t, –threads 线程数量<br>-l, –level  爬取级别<br> -t, –encode  payload采取的编码<br> –json  json格式的数据<br>–path指定路径注入<br>–seeds从文件加载url<br>–fuzzer fuzz工具<br> –update     更新<br>–timeout  超时时间<br>–params寻找参数<br> –crawl 爬取<br>–proxy    使用代理<br> –blind  爬取时盲注<br>–skip    跳过确认等<br> –skip-dom  跳过dom检查<br> –headers 添加headers<br>  -d, –delay    两次请求之间的延迟</p></blockquote></blockquote><h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p> &nbsp;有好几次自己搭建的环境 ，安装了waf，xsstrike好几次都测不出来，cookie也没返回给我。<br> &nbsp;可能是我没有看官方文档吧0.0。工具使用主要因为我们人变化，可能我测试的地方出现问题<br> &nbsp;<br> &nbsp;使用工具没有错，虽然被叫做脚本小子，但是工具让我们的测试变得更加方便，我们会使用工具的同时也要去了解其工作原理 &nbsp;</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 渗透工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> web漏洞 </tag>
+            
+            <tag> 渗透工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>xss跨站之原理分类及攻击手法</title>
       <link href="/year/12/27/xss-kua-zhan-zhi-yuan-li-fen-lei-ji-gong-ji-shou-fa/"/>
       <url>/year/12/27/xss-kua-zhan-zhi-yuan-li-fen-lei-ji-gong-ji-shou-fa/</url>

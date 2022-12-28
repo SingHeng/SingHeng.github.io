@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="xss跨站之原理分类及攻击手法, 绵酱">
+    <meta name="keywords" content="xsstrike工具的使用, 绵酱">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>xss跨站之原理分类及攻击手法 | 绵酱</title>
+    <title>xsstrike工具的使用 | 绵酱</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">xss跨站之原理分类及攻击手法</h1>
+                    <h1 class="description center-align post-title">xsstrike工具的使用</h1>
                 </div>
             </div>
         </div>
@@ -438,8 +438,8 @@
                                 <span class="chip bg-color">web漏洞</span>
                             </a>
                         
-                            <a href="/tags/Xss%E8%B7%A8%E7%AB%99%E6%BC%8F%E6%B4%9E/">
-                                <span class="chip bg-color">Xss跨站漏洞</span>
+                            <a href="/tags/%E6%B8%97%E9%80%8F%E5%B7%A5%E5%85%B7/">
+                                <span class="chip bg-color">渗透工具</span>
                             </a>
                         
                     </div>
@@ -450,8 +450,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/web%E6%BC%8F%E6%B4%9E/" class="post-category">
-                                web漏洞
+                            <a href="/categories/%E6%B8%97%E9%80%8F%E5%B7%A5%E5%85%B7/" class="post-category">
+                                渗透工具
                             </a>
                         
                     </div>
@@ -463,28 +463,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-12-27
+                    2022-12-28
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-12-27
+                    2022-12-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.9k
+                    821
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    3 分
                 </div>
                 
 
@@ -507,69 +507,62 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Xss跨站攻击的原理"><a href="#Xss跨站攻击的原理" class="headerlink" title="Xss跨站攻击的原理"></a>Xss跨站攻击的原理</h2><p>  XSS 属于被动式的攻击。攻击者先构造一个跨站页面，利用script、、等各种方式使得用户浏览这个页面时，触发对被攻击站点的http 请求。此时，如果被攻击者如果已经在被攻击站点登录，就会持有该站点cookie。这样该站点会认为被攻击者发起了一个http 请求。而实际上这个请求是在被攻击者不知情的情况下发起的，由此攻击者在一定程度上达到了冒充被攻击者的目的。精心的构造这个攻击请求，可以达到冒充发文，夺取权限等等多个攻击目的。在常见的攻击实例中，这个请求是通过script 来发起的，因此被称为Cross Site Script。攻击Yahoo Mail 的Yamanner 蠕虫是一个著名的XSS 攻击实例。YahooMail 系统有一个漏洞，当用户在web 上察看信件时，有可能执行到信件内的javascript 代码。病毒可以利用这个漏洞使被攻击用户运行病毒的script。同时Yahoo Mail 系统使用了Ajax技术，这样病毒的script可以很容易的向Yahoo Mail 系统发起ajax 请求，从而得到用户的地址簿，并发送病毒给他人。</p>
-<h3 id="危害"><a href="#危害" class="headerlink" title="危害"></a>危害</h3><p> &nbsp; &nbsp;<br>都是通过js脚本来实现的浏览器内核版本也会影响到js代码的实现</p>
-<p>1、钓鱼欺骗</p>
-<p>2、网站挂马</p>
-<p>3、身份盗用</p>
-<p>4、盗取网站用户信息</p>
-<p>5、垃圾信息发送</p>
-<p>6、劫持用户Web行为</p>
-<p>7、XSS蠕虫</p>
-<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><p>反射型(非持久型)，存储型(持久型)，DOM型</p>
-<h4 id="反射型"><a href="#反射型" class="headerlink" title="反射型"></a>反射型</h4><p>反射型攻击方式就是把可以执行的 js脚本放到URL参数里面。存储型的攻击方式通过评论的这种方式，加载评论的时候把它写入到评论里面，它被后台存储之后，用户再打开的时候就会执行评论里面的脚本，这种必须时间很短，攻击是不持续的</p>
-<h4 id="储存型（持久型）"><a href="#储存型（持久型）" class="headerlink" title="储存型（持久型）"></a>储存型（持久型）</h4><p>持久型/存储型XSS:嵌入到web页面的恶意HTML会被存储到应用服务器端，简而言之就是会被存储到数据库，等用户在打开页面时，会继续执行恶意代码，能够持续的攻击用户，<br>存储型：用户输入的数据会被存入数据库，然后页面输出时会被当做前端代码执行。</p>
-<p>如果用户输入的数据不被存入数据库可以做到存储性xss吗?<br>答案是可以的，存储型XSS的核心是存入到某个地方然后调用，不一定就要存在数据库里，还可以是文件里。</p>
+                <h3 id="关于XSStrike"><a href="#关于XSStrike" class="headerlink" title="关于XSStrike"></a>关于XSStrike</h3><p>XSStrike是一款用于探测并利用XSS漏洞的脚本<br>它集成了payload生成器、爬虫和模糊引擎功能。XSStrike不是像其他工具那样注入有效负载并检查其工作，而是通过多个解析器分析响应，然后通过与模糊引擎集成的上下文分析来保证有效负载。除此之外，XSStrike还具有爬行，模糊测试，参数发现，WAF检测功能。它还会扫描DOM XSS漏洞。</p>
+<hr>
+<p>下面是xsstrike的下载链接</p>
 <blockquote>
-<p>&lt;?php<br>if (@$_GET [‘a’]) {<br>file_put_contents ( ‘8.txt’,$_GET[‘a’] ); }<br>else{<br>echo file_get_contents ( ‘8.txt’ );<br>}<br>?&gt;</p>
-</blockquote>
-<p>file_put_contents()函数把一个字符串写入文件中。<br>file_get_contents()函数就是读取文件。<br>这段PHP代码的意思就是把GET传参a写入8.txt这个文件，然后读取出来<br>所以我们输入的东西会被存储到里面，第二次访问的时候会被读取出来，这里就构成了一个完整的存储，所以说数据库不是刚需。</p>
-<blockquote>
-<p>发包X=123 =&gt; x.php =&gt;写到数据库=&gt; x.php=&gt;回显</p>
-<blockquote>
-<p>评论框中输入script 代码, 一段未经转义过的 JS 代码被插入到页面之后，其他用户浏览的时候也会去执行它。如果是黑客它插一段JS代码，把用户cookie的值发送到指定的服务器上，这样他就能拿到用户的cookie值想干嘛就可以干嘛。我们知道HTTP协议它是没有状态，所以很多网站是通过Cookie去识别用户的，一旦黑客获取到你这个cookie就相当于拥有了你的账户就可以随便使用你这个账号了。这是个什么类型的 xss? 这个是把提交的脚本插入到数据库里面，所以这个是存储型的攻击方式。</p>
-</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/s0md3v/XSStrike">XSS的github项目</a></p>
 </blockquote>
 <blockquote>
-<p>发包X=123 =&gt; x.php =&gt;回包</p>
+<p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1y50VYVRGnRumg7CP1qqdRA?pwd=ooen">百度网盘链接 密码ooen</a></p>
+</blockquote>
+<h4 id="XSStrike的特点"><a href="#XSStrike的特点" class="headerlink" title="XSStrike的特点"></a>XSStrike的特点</h4><p>对参数进行模糊测试之后构建合适的payload</p>
+<p>使用payload对参数进行穷举匹配</p>
+<p>内置爬虫功能</p>
+<p>检测并尝试绕过WAF</p>
+<p>支持GET及POST方式</p>
+<p>误报率极低</p>
+<h3 id="XSStrike的使用"><a href="#XSStrike的使用" class="headerlink" title="XSStrike的使用"></a>XSStrike的使用</h3><p><strong>绵酱这边提现你：XSStrike只可以运行在python 3.6 及以上版本！！！！！！</strong></p>
+<p>下载完后解压，复制XSStrike.py的文件路径在cmd窗口中运行</p>
+<p>更新依赖 &nbsp;在xsstrike目录中</p>
 <blockquote>
-<p>有一些后端它是通过URL参数来去获取的，有时候会把脚本放入URL参数里面如：<a target="_blank" rel="noopener" href="http://test.com/xss/example.php?name=%EF%BC%8C%E7%84%B6%E5%90%8E%E9%80%9A%E8%BF%87%E9%82%AE%E4%BB%B6%E6%96%B9%E5%BC%8F%E5%8F%91%E9%80%81%E7%BB%99%E7%94%A8%E6%88%B7%EF%BC%8C%E8%AF%B1%E5%AF%BC%E7%94%A8%E6%88%B7%E5%8E%BB%E7%82%B9%E5%87%BB,%E8%BF%99%E5%B0%B1%E6%98%AF%E9%9D%9E%E5%AD%98%E5%82%A8%E5%BD%A2%E5%BC%8F%E7%9A%84">http://test.com/xss/example.php?name=，然后通过邮件方式发送给用户，诱导用户去点击,这就是非存储形式的</a> XSS</p>
+<p>pip3 install -r requirements.txt<br>运行<br>python3 xsstrike.py -u “<a target="_blank" rel="noopener" href="http://target/">http://target</a>“</p>
 </blockquote>
-</blockquote>
-<h4 id="DOM型"><a href="#DOM型" class="headerlink" title="DOM型"></a>DOM型</h4><p>DOM型涉及到HTML DOM树，我相信学习HTML的同学不会觉得陌生<br><img src="/img/07.jpg" title="DOM树"></p>
+<p>测试GET传参的网页：</p>
 <blockquote>
-<p>Document 根节点（有些文档说Document是根节点，也有些文档说 html元素是 根节点。从对象的角度上来看，Document是根对象，从元素的角度上看，html元素由于父元素是null，所以是根元素）；<br>html 元素，html元素的父元素为null，所以从元素的角度来说是树的根；<br>head 元素 和 body 元素 都是 html 根元素的子元素。所以树对象（节点）可以具有子对象（子节点）；<br>href属性 是 a 元素的子对象（子节点），所以DOM树包含属性对象（属性节点）；<br>text文本 是 title元素 的子对象（子节点），所以DOM树包含文本对象（文本节点）；<br>a元素 的 父对象 是 body元素，body元素的 父对象 是 html元素，所以html元素 是 a元素的祖先对象（祖先节点）；<br>a元素 和 h1元素 都是 body元素的子对象（子节点），所以 a元素 和 h1元素是兄弟对象（兄弟节点）；<br>不懂想要了解的朋友可以去仔细学习一下</p>
+<p>python3 xsstrike.py -u “<a target="_blank" rel="noopener" href="http://xxxxxxxx.com/xss.php?payload=1">http://xxxxxxxx.com/xss.php?payload=1</a>“</p>
 </blockquote>
-<p>DOM型是直接调用前段静态代码#’onclick=”alcrt(2)”&gt;我们可以在数据包中看到这些数据的交互，</p>
-<h4 id="三者的区别"><a href="#三者的区别" class="headerlink" title="三者的区别"></a>三者的区别</h4><blockquote>
-<p>反射型XSS的被攻击对象一般是攻击者去寻找的，就比如说：一个攻击者想盗取A的QQ号，那么攻击者就可以将一个含有反射型XSS的URL链接给A，此时我们可以看出，需要将特定的URL，注意是特定的URL给A，当A点击进入链接时，就受到XSS攻击，所以这种攻击范围不是特别的广。</p>
-</blockquote>
+<p>测试POST数据：</p>
 <blockquote>
-<p>而存储型XSS是广撒网的方式或者指定的方式，就是攻击者将存储型XSS放在一些有XSS漏洞的网站上，只要有用户访问这个链接就会中招，而攻击者也可以寻找被攻击对象，比如说上面的例子，所以我们可以看出，存储型XSS的危害性更大，范围更广，可以不需要寻找被攻击对象，只要存储型XSS在服务器上就能实施攻击。</p>
+<p>python3 xsstrike.py -u “<a target="_blank" rel="noopener" href="http://xxxxx.com/search.php">http://xxxxx.com/search.php</a>“ –data “q=query”<br>python3 xsstrike.py -u “<a target="_blank" rel="noopener" href="http://xxxxxx.com/search.php">http://xxxxxx.com/search.php</a>“ –data ‘{“q”:”query”} –json’</p>
 </blockquote>
+<p>通过解析HTML和暴力破解来查找隐藏的参数</p>
 <blockquote>
-<p>DOM型XSS的被攻击对象其实和反射型XSS被攻击对象差不多，就是给攻击对象放送URL。</p>
+<p>python3 xsstrike.py -u “<a target="_blank" rel="noopener" href="http://example.com/page.php">http://example.com/page.php</a>“ –params</p>
 </blockquote>
-<h3 id="cookie和Session"><a href="#cookie和Session" class="headerlink" title="cookie和Session"></a>cookie和Session</h3><p> 1.Cookie 和 Session都是用来跟踪浏览器用户身份的会话方式，但是两者的应用场景不太一样。Cookie 一般用来保存用户信息 比如</p>
-<p> 2.我们在 Cookie 中保存已经登录过得用户信息，下次访问网站的时候页面可以自动帮你填写登录的一些基本信息；一般的网站都会有保持登录也就是说下次你再访问网站的时候就不需要重新登录了，这是因为用户登录的时候我们可以存放了一个 Token 在 Cookie 中，下次登录的时候只需要根据 Token 值来查找用户即可(为了安全考虑，重新登录一般要将 Token 重写)；</p>
-<p>3.登录一次网站后访问网站其他页面不需要重新登录。Session 的主要作用就是通过服务端记录用户的状态。典型的场景是购物车，当你要添加商品到购物车的时候，系统不知道是哪个用户操作的，因为 HTTP 协议是无状态的。服务端给特定的用户创建特定的Session 之后就可以标识这个用户并且跟踪这个用户了。Cookie 数据保存在客户端(浏览器端)，Session 数据保存在服务器端。Cookie 存储在客户端中，而Session存储在服务器上，相对来说 Session 安全性更高。如果使用 Cookie的一些敏感信息不要写入 Cookie 中，最好能将 Cookie 信息加密然后使用到的时候再去服务器端解密。</p>
-<p><strong>session存在的时间很短 ，一般我们都是获取cookie，但是有些大型网站会采取双验证，当然，我要是能获取到别人cookie我已经很开心了</strong></p>
-<h4 id="cookie原理"><a href="#cookie原理" class="headerlink" title="cookie原理"></a>cookie原理</h4><p>当你在浏览网站的时候，WEB 服务器会先送一小小资料放在你的计算机上，Cookie 会帮你在网站上所打的文字或是一些选择，都纪录下来。当下次你再光临同一个网站，WEB 服务器会先看看有没有它上次留下的 Cookie 资料，有的话，就会依据 Cookie里的内容来判断使用者，送出特定的网页内容给你。</p>
-<h4 id="session原理"><a href="#session原理" class="headerlink" title="session原理"></a>session原理</h4><blockquote>
-<p>cookie保存session的id：保存这个session id的方式可以采用cookie，一般这个cookie的名字都是类似于SEEESIONID。<br>session机制是一种服务器端的机制，服务器使用一种类似于散列表的结构（也可能就是使用散列表）来保存信息。<br>session机制是一种服务器端的机制，服务器使用一种类似于散列表的结构（也可能就是使用散列表）来保存信息。</p>
+<p>盲打XSS：爬行中使用此参数可向每个html表单里面的每个变量插入xss代码<br>在爬取时使用此选项，XSStrike注入定义在core/config.py中的盲注payloads到每个HTML表单的每个参数。<br>core/config.py中的payloads</p>
+<blockquote>
+<p>python3 xsstrike.py -u <a target="_blank" rel="noopener" href="http://example.com/page.php?q=query">http://example.com/page.php?q=query</a> –crawl –blind</p>
 </blockquote>
-<p>  当程序需要为某个客户端的请求创建一个session时，服务器首先检查这个客户端的请求里是否已包含了一个session标识</p>
-<p>（称为session id），如果已包含则说明以前已经为此客户端创建过session，服务器就按照session id把这个session检索出来</p>
-<p>使用（检索不到，会新建一个），如果客户端请求不包含session id，则为此客户端创建一个session并且生成一个与此session相</p>
-<p>关联的session id，session id的值应该是一个既不会重复，又不容易被找到规律以仿造的字符串，这个session id将被在本次响应</p>
-<p>中返回给客户端保存。保存这个session id的方式可以采用cookie，这样在交互过程中浏览器可以自动的按照规则把这个标识发送给</p>
-<p>服务器。一般这个cookie的名字都是类似于SEEESIONID。但cookie可以被人为的禁止，则必须有其他机制以便在cookie被禁止时</p>
-<p>仍然能够把session id传递回服务器。</p>
-<h4 id="cookie-和session-的区别："><a href="#cookie-和session-的区别：" class="headerlink" title="cookie 和session 的区别："></a>cookie 和session 的区别：</h4><p>1、cookie数据存放在客户的浏览器上，session数据放在服务器上。</p>
-<p>2、cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗<br>   考虑到安全应当使用session。</p>
-<p>3、session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能<br>   考虑到减轻服务器性能方面，应当使用COOKIE。</p>
-<p>4、单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。</p>
-<p>5、所以个人建议：<br>   将登陆信息等重要信息存放为SESSION<br>   其他信息如果需要保留，可以放在COOKIE中</p>
+<p><img src="/img/11.png" title="我也没看懂"></p>
+<p>这种情况我我也不清楚，这就是gitub第一xss注入神器吗</p>
+<p>模糊测试 –fuzzer<br>该模糊器旨在测试过滤器和Web应用程序防火墙，可使用-d选项将延迟设置为1秒。不然可能被waf软件拉黑ip</p>
+<blockquote>
+<p>python3 xsstrike.py -u “<a target="_blank" rel="noopener" href="http://example.com/search.php?q=query">http://example.com/search.php?q=query</a>“ –fuzzer</p>
+</blockquote>
+<p>跳过Dom扫描<br>选项：–skip-dom</p>
+<p>如果确定了不是dom型，为了节省时间，可以跳过dom扫描。</p>
+<blockquote>
+<p>python xsstrike.py -u “<a target="_blank" rel="noopener" href="http://example.com/search.php?q=query">http://example.com/search.php?q=query</a>“ –skip-dom</p>
+</blockquote>
+<h3 id="各参数的说明"><a href="#各参数的说明" class="headerlink" title="各参数的说明"></a>各参数的说明</h3><blockquote>
+<p>选项	作用</p>
+<blockquote>
+<p>-h, –help	显示帮助信息并退出<br> -u, –url  	目标url<br>–data 	post方法的数据<br>-f, –file  	从文件读取payloads<br>-t, –threads 	线程数量<br>-l, –level  	爬取级别<br> -t, –encode  	payload采取的编码<br> –json  	json格式的数据<br>–path	指定路径注入<br>–seeds	从文件加载url<br>–fuzzer 	fuzz工具<br> –update     	更新<br>–timeout  	超时时间<br>–params	寻找参数<br> –crawl 	爬取<br>–proxy    	使用代理<br> –blind  	爬取时盲注<br>–skip    	跳过确认等<br> –skip-dom  	跳过dom检查<br> –headers 	添加headers<br>  -d, –delay    	两次请求之间的延迟</p>
+</blockquote>
+</blockquote>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p> &nbsp;有好几次自己搭建的环境 ，安装了waf，xsstrike好几次都测不出来，cookie也没返回给我。<br> &nbsp;可能是我没有看官方文档吧0.0。工具使用主要因为我们人变化，可能我测试的地方出现问题<br> &nbsp;<br> &nbsp;使用工具没有错，虽然被叫做脚本小子，但是工具让我们的测试变得更加方便，我们会使用工具的同时也要去了解其工作原理
+ &nbsp;</p>
 
                 
             </div>
@@ -596,7 +589,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.zyj6.top/year/12/27/xss-kua-zhan-zhi-yuan-li-fen-lei-ji-gong-ji-shou-fa/">http://www.zyj6.top/year/12/27/xss-kua-zhan-zhi-yuan-li-fen-lei-ji-gong-ji-shou-fa/</a>
+                    <a href="http://www.zyj6.top/year/12/28/xsstrike-gong-ju-de-shi-yong/">http://www.zyj6.top/year/12/28/xsstrike-gong-ju-de-shi-yong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -638,8 +631,8 @@
                                     <span class="chip bg-color">web漏洞</span>
                                 </a>
                             
-                                <a href="/tags/Xss%E8%B7%A8%E7%AB%99%E6%BC%8F%E6%B4%9E/">
-                                    <span class="chip bg-color">Xss跨站漏洞</span>
+                                <a href="/tags/%E6%B8%97%E9%80%8F%E5%B7%A5%E5%85%B7/">
+                                    <span class="chip bg-color">渗透工具</span>
                                 </a>
                             
                         </div>
@@ -1118,9 +1111,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/year/12/28/xsstrike-gong-ju-de-shi-yong/">
                     <div class="card-image">
@@ -1138,9 +1132,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1153,6 +1147,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1175,13 +1170,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/year/12/26/wen-jian-shang-chuan-lou-dong-qian-tan/">
+                <a href="/year/12/27/xss-kua-zhan-zhi-yuan-li-fen-lei-ji-gong-ji-shou-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="文件上传漏洞浅谈">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="xss跨站之原理分类及攻击手法">
                         
-                        <span class="card-title">文件上传漏洞浅谈</span>
+                        <span class="card-title">xss跨站之原理分类及攻击手法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1192,7 +1187,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-27
                             </span>
                         <span class="publish-author">
                             
@@ -1200,10 +1195,6 @@
                             
                             <a href="/categories/web%E6%BC%8F%E6%B4%9E/" class="post-category">
                                     web漏洞
-                                </a>
-                            
-                            <a href="/categories/web%E6%BC%8F%E6%B4%9E/%E7%BD%91%E7%AB%99%E4%B8%AD%E9%97%B4%E4%BB%B6/" class="post-category">
-                                    网站中间件
                                 </a>
                             
                             
@@ -1217,12 +1208,8 @@
                         <span class="chip bg-color">web漏洞</span>
                     </a>
                     
-                    <a href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/">
-                        <span class="chip bg-color">文件上传漏洞</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/">
-                        <span class="chip bg-color">解析漏洞</span>
+                    <a href="/tags/Xss%E8%B7%A8%E7%AB%99%E6%BC%8F%E6%B4%9E/">
+                        <span class="chip bg-color">Xss跨站漏洞</span>
                     </a>
                     
                 </div>
