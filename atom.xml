@@ -6,7 +6,7 @@
   <link href="http://www.zyj6.top/atom.xml" rel="self"/>
   
   <link href="http://www.zyj6.top/"/>
-  <updated>2022-12-28T13:10:56.114Z</updated>
+  <updated>2023-01-04T16:08:18.222Z</updated>
   <id>http://www.zyj6.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>内存取证第一天</title>
+    <link href="http://www.zyj6.top/year/01/04/nei-cun-qu-zheng/"/>
+    <id>http://www.zyj6.top/year/01/04/nei-cun-qu-zheng/</id>
+    <published>2023-01-04T12:50:00.000Z</published>
+    <updated>2023-01-04T16:08:18.222Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;内存取证&quot;&gt;&lt;a href=&quot;#内存取证&quot; class=&quot;headerlink&quot; title=&quot;内存取证&quot;&gt;&lt;/a&gt;内存取证&lt;/h3&gt;&lt;p&gt;内存取证 (Memory forensics) 是一种从内存中找到和抽取这些有价值的信息的方式。&lt;/p&gt;
+&lt;p&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="数字取证" scheme="http://www.zyj6.top/categories/%E6%95%B0%E5%AD%97%E5%8F%96%E8%AF%81/"/>
+    
+    
+    <category term="数字取证" scheme="http://www.zyj6.top/tags/%E6%95%B0%E5%AD%97%E5%8F%96%E8%AF%81/"/>
+    
+  </entry>
   
   <entry>
     <title>xsstrike工具的使用</title>
