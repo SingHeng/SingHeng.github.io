@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>内存取证实践例题</title>
+      <link href="/year/01/14/nei-cun-qu-zheng-shi-jian-li-ti/"/>
+      <url>/year/01/14/nei-cun-qu-zheng-shi-jian-li-ti/</url>
+      
+        <content type="html"><![CDATA[<h3 id="内存取证的大致思路"><a href="#内存取证的大致思路" class="headerlink" title="内存取证的大致思路"></a>内存取证的大致思路</h3><p>首先确定镜像是何种操作系统的，命令imageinfo即可获取镜像信息。</p><p>需要获取的是计算机在这一时刻运行了哪些进程。</p><p>Volatility提供了众多的分析进程的命令，如pstree、pesscan、pslist……</p><p>filescan命令可以对打开的文件进行扫描。</p><p>命令dumpfile和memdump命令将相关数据导出，然后对导出的数据进行二进制分析。</p><p>简单说只要熟悉Volatility工具的常用命令，并能够对结合其他类型的知识（图片隐写、压缩包分析等）对提取出的文件进行分析，便可轻松解决。</p><p>但当然具体问题具体分析吗  但插件就上面的 </p><h3 id="46届世界技能大赛湖北省选拔赛"><a href="#46届世界技能大赛湖北省选拔赛" class="headerlink" title="46届世界技能大赛湖北省选拔赛"></a>46届世界技能大赛湖北省选拔赛</h3><p>是46届世界技能大赛湖北省选拔赛 也是今年金砖比赛的样题</p><blockquote><p>你作为 A 公司的应急响应人员，请分析提供的内存文件按照下面的要求找到 相关关键信息，完成应急响应事件。<br>1、从内存中获取到用户admin的密码并且破解密码，以Flag{admin,password} 形式提交(密码为 6 位)；<br>2、获取当前系统 ip 地址及主机名，以 Flag{ip:主机名}形式提交；<br>3、获取当前系统浏览器搜索过的关键词，作为 Flag 提交；<br>4、当前系统中存在挖矿进程，请获取指向的矿池地址，以 Flag{ip:端口}形式 提交；<br>5、恶意进程在系统中注册了服务，请将服务名以 Flag{服务名}形式提交。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数字取证 </tag>
+            
+            <tag> 内存取证 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>内存取证第一天</title>
       <link href="/year/01/04/nei-cun-qu-zheng/"/>
       <url>/year/01/04/nei-cun-qu-zheng/</url>

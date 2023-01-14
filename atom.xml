@@ -6,7 +6,7 @@
   <link href="http://www.zyj6.top/atom.xml" rel="self"/>
   
   <link href="http://www.zyj6.top/"/>
-  <updated>2023-01-04T16:08:18.222Z</updated>
+  <updated>2023-01-14T07:22:07.082Z</updated>
   <id>http://www.zyj6.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>内存取证实践例题</title>
+    <link href="http://www.zyj6.top/year/01/14/nei-cun-qu-zheng-shi-jian-li-ti/"/>
+    <id>http://www.zyj6.top/year/01/14/nei-cun-qu-zheng-shi-jian-li-ti/</id>
+    <published>2023-01-14T07:11:00.000Z</published>
+    <updated>2023-01-14T07:22:07.082Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;内存取证的大致思路&quot;&gt;&lt;a href=&quot;#内存取证的大致思路&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="网络安全" scheme="http://www.zyj6.top/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+    <category term="数字取证" scheme="http://www.zyj6.top/tags/%E6%95%B0%E5%AD%97%E5%8F%96%E8%AF%81/"/>
+    
+    <category term="内存取证" scheme="http://www.zyj6.top/tags/%E5%86%85%E5%AD%98%E5%8F%96%E8%AF%81/"/>
+    
+  </entry>
   
   <entry>
     <title>内存取证第一天</title>
